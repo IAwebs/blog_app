@@ -58,8 +58,8 @@ const Login = async (req, res) => {
 
         const token = jwt.sign({ userId: FindUser._id }, process.env.JWT_SECRET);
         res.cookie('token', token, {
-            httpOnly: true,
-            secure: false,
+            httpOnly: false,  // ies to false kiye hai deployment k liye 
+            secure: true,   // ies ko true kiye hai deployment k liye 
             maxAge: 3 * 24 * 60 * 60 * 1000 // 3 days in milliseconds
         });
         
