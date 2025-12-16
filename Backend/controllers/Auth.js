@@ -90,7 +90,7 @@ const Login = async (req, res) => {
     // ✅ Correct cookie settings for Render + React
     res.cookie("token", token, {
       httpOnly: true,
-      secure: true,
+      secure: false,
       sameSite: "None",
       maxAge: 3 * 24 * 60 * 60 * 1000,
     });
