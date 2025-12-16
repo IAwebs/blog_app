@@ -64,7 +64,7 @@ const Login = async (req, res) => {
         // });
 
         res.cookie("token", token, {
-    httpOnly: true,
+    httpOnly: false,
     secure: process.env.NODE_ENV === "production", // true in Render
     sameSite: "None",  // required for cross-site cookies
     maxAge: 3 * 24 * 60 * 60 * 1000
