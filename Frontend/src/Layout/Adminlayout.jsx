@@ -18,10 +18,6 @@ export default function Adminlayout() {
  else if ( user.role !=='admin') {
       navigate('/')
   }
-
-
-
-
   },[user,navigate])
   return (
     <>
